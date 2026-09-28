@@ -110,4 +110,4 @@ class CategoryQuotesView(View):
         quote_id = body['quote_id']
         get_object_or_404(Quote, pk=quote_id)
         QuoteCategory.objects.get_or_create(quote_id=quote_id, category_id=pk)
-        return JsonResponse({'status': 'ok'}, status=201)g
+        return JsonResponse({'status': 'ok'}, status=201)
